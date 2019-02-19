@@ -23,8 +23,15 @@ function daysOfMonth(month, leapYear=false){
             }else{
                 result = `${month} has 28 days`;
             }
+        default:
+            throw new Error('Must provide a valid month');
     }
     return result;
 }
 
-console.log(daysOfMonth('april'));
+try{
+    console.log(daysOfMonth('aprillll'));
+}
+catch (e){
+    console.log(e.message);
+}
